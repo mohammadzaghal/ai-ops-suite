@@ -1,0 +1,10 @@
+{
+  "nextId": 6,
+  "tasks": [
+    { "id": 1, "title": "Confirm tomorrow’s cleaning schedule", "status": "todo", "priority": "high", "assignee": "Team A", "dueDate": "2026-01-09", "createdAt": "2026-01-07T08:30:00.000Z", "updatedAt": "2026-01-07T08:30:00.000Z" },
+    { "id": 2, "title": "Send invoice summary to client", "status": "in_progress", "priority": "medium", "assignee": "Office", "dueDate": "2026-01-10", "createdAt": "2026-01-07T08:30:00.000Z", "updatedAt": "2026-01-07T08:30:00.000Z" },
+    { "id": 3, "title": "Check supplies stock (chemicals, bags)", "status": "done", "priority": "low", "assignee": "Warehouse", "dueDate": null, "createdAt": "2026-01-07T08:30:00.000Z", "updatedAt": "2026-01-07T08:30:00.000Z" },
+    { "id": 4, "title": "QA audit: photos checklist review", "status": "todo", "priority": "medium", "assignee": "Supervisor", "dueDate": "2026-01-11", "createdAt": "2026-01-07T08:30:00.000Z", "updatedAt": "2026-01-07T08:30:00.000Z" },
+    { "id": 5, "title": "Update SOP for after-renovation cleaning", "status": "in_progress", "priority": "high", "assignee": "Operations", "dueDate": "2026-01-15", "createdAt": "2026-01-07T08:30:00.000Z", "updatedAt": "2026-01-07T08:30:00.000Z" }
+  ]
+}
