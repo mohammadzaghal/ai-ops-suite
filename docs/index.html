@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyginix Ops Suite</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+
+    <header class="top">
+      <div class="brand">
+        <div class="logo">H</div>
+        <div>
+          <div class="title">Hyginix Ops Suite</div>
+          <div class="subtitle">Tasks • QA • Operations (Demo)</div>
+        </div>
+      </div>
+
+      <div class="apiBox">
+        <span class="muted">API</span>
+        <input id="apiUrl" value="http://localhost:3000" />
+        <button id="saveApi" type="button">Save</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="panel">
+        <div class="panelHead">
+          <h2>Create task</h2>
+          <div class="hint">Enter to submit • Esc clears</div>
+        </div>
+
+        <form id="createForm" class="grid">
+          <div class="field">
+            <label>Title</label>
+            <input id="title" required minlength="3" maxlength="120" placeholder="e.g., QA audit for apartment #12" />
+          </div>
+
+          <div class="field">
+            <label>Assignee</label>
+            <input id="assignee" required minlength="2" maxlength="60" placeholder="e.g., Team A / Supervisor" value="Unassigned" />
+          </div>
+
+          <div class="field">
+            <label>Priority</label>
+            <select id="priority">
+              <option value="low">low</option>
+              <option value="medium" selected>medium</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Due date</label>
+            <input id="dueDate" type="date" />
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="primary">Add task</button>
+            <button type="button" id="clearForm">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panelHead">
+          <h2>Tasks</h2>
+          <div class="right">
+            <button id="refresh" type="button">Refresh</button>
+          </div>
+        </div>
+
+        <div class="filters">
+          <div class="field">
+            <label>Search</label>
+            <input id="q" placeholder="title or assignee..." />
+          </div>
+
+          <div class="field">
+            <label>Status</label>
+            <select id="status">
+              <option value="">all</option>
+              <option value="todo">todo</option>
+              <option value="in_progress">in progress</option>
+              <option value="done">done</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Priority</label>
+            <select id="priorityFilter">
+              <option value="">all</option>
+              <option value="low">low</option>
+              <option value="medium">medium</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Sort</label>
+            <select id="sort">
+              <option value="updatedAt" selected>updated</option>
+              <option value="createdAt">created</option>
+              <option value="dueDate">due date</option>
+              <option value="priority">priority</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Direction</label>
+            <select id="dir">
+              <option value="desc" selected>desc</option>
+              <option value="asc">asc</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Page size</label>
+            <select id="pageSize">
+              <option value="10" selected>10</option>
+              <option value="15">15</option>
+              <option value="25">25</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="meta" class="meta"></div>
+        <div id="list" class="list"></div>
+
+        <div class="pager">
+          <button id="prev" type="button">Prev</button>
+          <div id="pageInfo" class="muted"></div>
+          <button id="next" type="button">Next</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
